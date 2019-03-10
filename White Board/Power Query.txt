@@ -1,0 +1,27 @@
+Date.Year([Out by])
+Date.QuarterOfYear([Out by])
+Date.Month([Out by])
+Date.WeekOfYear([Out by])
+
+
+DateTime.Date(DateTime.LocalNow())
+
+Date.Year(DateTime.LocalNow())
+Date.QuarterOfYear(DateTime.LocalNow())
+Date.Month(DateTime.LocalNow())
+Date.WeekOfYear(DateTime.LocalNow())
+
+
+
+
+=NUMBERVALUE([@[Year (Plan)]]&TEXT(IFNA(VLOOKUP([@[Month (Plan)]],OutupMonth_Table,2,FALSE),""),"00"))
+
+=ADDRESS(MATCH([@[Year & month output plan]],Output_Table[[#All],[Year & month output plan]],0)+2,COLUMN([@[Out qty]]),4,1)
+
+=[@Year]&TEXT(IFNA(VLOOKUP([@[Output month]],OutupMonth_Table,2,FALSE),""),"00")
+
+"01/" & [#"Month number (Plan)"] & "/" & Number.ToText([#"Year (Plan)"])
+
+[Out by]
+
+=CALCULATE(SUM([Out qty]),all(Output_qry[Job]))

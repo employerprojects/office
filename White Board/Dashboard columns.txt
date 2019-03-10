@@ -1,0 +1,26 @@
+255
+199
+206
+
+Queries:
+All with unique ID
+Job list distinct
+Shelf life
+Shortages
+Ouptut plan	?
+Jobs split	!
+Output
+Current week
+
+Output review
+-----
+
+Pivots:
+Dashboad:
+Goals	- week
+	- month
+	- quarter
+	- year
+Shortages	- still short
+Shelf life
+
